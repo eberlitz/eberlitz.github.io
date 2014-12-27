@@ -1,0 +1,12 @@
+# Site settings
+title: Eduardo Eidelwein Berlitz blog
+email: 
+description: "A blog about computer science"
+baseurl: ""
+url: "http://eberlitz.github.io"
+twitter_username: eberlitz
+github_username:  eberlitz
+
+# Build settings
+markdown: redcarpet
+permalink: pretty
