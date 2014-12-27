@@ -3,7 +3,8 @@ layout: post
 comments: false
 title:  "Post title"
 excerpt: "A nice post"
-date:   false
+date:   2014-07-02 10:00:00
+published:   false
 ---
 
 
