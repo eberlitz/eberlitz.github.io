@@ -4,6 +4,7 @@ mathjax: true
 comments: true
 title: Sample utilities
 permalink: /sample/
+date: null
 ---
 
 
