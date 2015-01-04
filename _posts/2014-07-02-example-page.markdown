@@ -13,7 +13,9 @@ published:   false
 
 ## What is Machine Learning?
 
-Types of machine learning algorithms:
+Machine learning is a scientific discipline that explores the construction and study of algorithms that can learn from data. Such algorithms operate by building a model based on inputs and using that to make predictions or decisions, rather than following only explicitly programmed instructions.
+
+Types of machine learning problems:
 
 - Supervised Learning
 - Unsupervised Learning
@@ -125,3 +127,9 @@ http://karpathy.github.io/neuralnets/
 
 Introduction to Deep Learning with Python (Theano)
 https://www.youtube.com/watch?v=S75EdAcXHKk
+
+
+
+Focar em algo prático
+
+Montar um ambiente com todos os aparatos necessários
