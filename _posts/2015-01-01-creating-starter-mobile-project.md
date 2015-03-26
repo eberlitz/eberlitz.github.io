@@ -4,7 +4,7 @@ comments: true
 title:  "Creating a starter project for mobile apps"
 excerpt: ""
 date:   2015-01-01 18:00:00
-published:   false
+published:   true
 ---
 
 # Intro
