@@ -38,6 +38,7 @@ Understanding the project structure
 -----------------------------------
 
 The new Cordova project includes four top-level folders:
+
 - **merges** is used to add platform-specific code.
 - **plugins** is used for Apache Cordova plugins that provide access to native device features.
 - **res** is used for platform-specific visual assets (icons and splash screens).
@@ -47,6 +48,7 @@ The new Cordova project includes four top-level folders:
     - **scripts** is the default location for all JavaScript files.
     
 In addition to CSS and JavaScript files, the new project also includes several more files:
+
 - **config.xml** contains configuration settings for your app. 
 - **taco.json** stores project metadata that enables Visual Studio to build on non-Windows operating systems like a Mac.
 - **www\index.html** is the default home screen for your app.
