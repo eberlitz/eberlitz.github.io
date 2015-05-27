@@ -1,12 +1,14 @@
 ---
 layout: post
-comments: false
-title:  "Post title"
-excerpt: "A nice post"
-date:   2014-07-02 10:00:00
+comments: true
+title:  "Introduction to Machine Learning"
+excerpt: "A simple introduction to machine learning"
+date:   2014-12-28 10:00:00
 mathjax: true
 published:   false
 ---
+
+# Introduction to Machine Learning
 
 # Introduction 
 
