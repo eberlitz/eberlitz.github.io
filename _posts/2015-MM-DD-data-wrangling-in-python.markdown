@@ -88,3 +88,19 @@ Parsing HTML
 ============
 
 from bs4 import BeautifulSoup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

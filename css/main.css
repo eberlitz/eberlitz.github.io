@@ -34,6 +34,10 @@ a:visited { color: #205caa; }
   zoom: 1;
 }
 
+.post p {
+  text-align: justify;
+}
+
 
 /* Layout Styles */
 /* ----------------------------------------------------------*/
@@ -234,7 +238,8 @@ a:visited { color: #205caa; }
   -moz-border-radius: 3px;
   border-radius: 3px;
   font-size: 15px;
-  overflow:auto;
+  /*overflow:auto;*/
+  word-wrap: break-word;
 }
 
 .post code { padding: 1px 5px; }
