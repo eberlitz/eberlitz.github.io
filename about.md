@@ -17,14 +17,3 @@ How to get in touch?
 ====================
 
 You can [send me an e-mail](mailto:eberlitz@gmail.com) for any question or suggestion.
-
-
-
-
-
-
-
-
-
-
-
