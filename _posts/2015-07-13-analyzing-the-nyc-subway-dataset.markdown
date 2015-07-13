@@ -36,7 +36,7 @@ As the twotailed pvalue is smaller than the significance level of 5% (0.05) we c
 
 I used Gradient descent to compute the coefficients theta and prediction of the ENTRIESn_hourly. The default values for alpha and the number of iterations were used and as seen by plotting the cost history by the number of iterations the regression model converge on a local minimum.
 
-![Cost History](http://eberlitz.github.io/assets/using-visual-studio-2015-to-build-hybrid-apps/cost_history.jpg)
+![Cost History](http://eberlitz.github.io/assets/analyzing-the-nyc-subway-dataset/cost_history.jpg)
 
 **2.2 What features (input variables) did you use in your model? Did you use any dummy variables as part of your features?**
 
@@ -61,11 +61,11 @@ I decided to use features that relate in some way whether, hour of day and rider
 
 In general, the goodness of fit for a linear regression model can be determinate if the differences between the observed values and the model's predicted values are small and unbiased. The regression model accounts for 46.4% of the variance based on the Rsquared which is a statistical measure of how close the data are to the fitted regression line. But it cannot determine whether the coefficient estimates and predictions are biased, which is why the residual plots should be assessed. 
 
-![Histogram of Residuals](http://eberlitz.github.io/assets/using-visual-studio-2015-to-build-hybrid-apps/residuals_hist.jpg)
+![Histogram of Residuals](http://eberlitz.github.io/assets/analyzing-the-nyc-subway-dataset/residuals_hist.jpg)
 
 Note that the histogram of the residuals has long tails, which suggests that there are some very large residuals. We can use the normal plot of residuals to verify the assumption that the residuals are normally distributed. The normal probability plot of the residuals should approximately follow a straight line. 
 
-![Probability Plot](http://eberlitz.github.io/assets/using-visual-studio-2015-to-build-hybrid-apps/prob_plot.jpg)
+![Probability Plot](http://eberlitz.github.io/assets/analyzing-the-nyc-subway-dataset/prob_plot.jpg)
 
 The probability plot of residuals does not approximately follow a straight line, which means that the residuals does not follow a normal distribution. Thus, prediction intervals may be inaccurate. So based on this and the Rsquared value, that is relatively low, I conclude that this linear regression model is probably inappropriate to predict ridership for this dataset. Further and advanced study could check for other problems with the model, such as missing terms or a time order effect, which could lead to include more features or the use of polynomial regression to improve the goodness of fit for this model. 
 
@@ -73,13 +73,13 @@ The probability plot of residuals does not approximately follow a straight line,
 
 **3.1 One visualization should contain two histograms: one of ENTRIESn_hourly for rainy days and one of ENTRIESn_hourly for nonrainy days. **
 
-![Histogram of entries by rainy and non-rainy days](http://eberlitz.github.io/assets/using-visual-studio-2015-to-build-hybrid-apps/entries_hist.jpg)
+![Histogram of entries by rainy and non-rainy days](http://eberlitz.github.io/assets/analyzing-the-nyc-subway-dataset/entries_hist.jpg)
 
 Plotting this two histograms of subway entries for rainy and nonrainy days we can determine that both distributions are not normallydistributed. Also, as seen by these plots, there are many more samples for nonrainy days than for rainy days. 
 
 **3.2 One visualization can be more freeform. You should feel free to implement something that we discussed in class (e.g., scatter plots, line plots) or attempt to implement something more advanced if you'd like.**
 
-![Average entries by time of day](http://eberlitz.github.io/assets/using-visual-studio-2015-to-build-hybrid-apps/entries_time_avg.jpg)
+![Average entries by time of day](http://eberlitz.github.io/assets/analyzing-the-nyc-subway-dataset/entries_time_avg.jpg)
 
 The above chart shows the average hourly ridership by time of day. The sum of ENTRIESn_hourly by Hour was divided by the count of rows for a given time of day. The chart shows that the average ridership is higher at noon and at 20pm. 
 
