@@ -19,15 +19,11 @@ by Eduardo Eidelwein Berlitz in fulfillment of Udacity’s Data Analyst Nanodegr
 
 After running the audit script from lesson 6 against my chosen area I realized that I should change the regular expression to find the first word of the street name, and not the last. That's because the language in this map area is Portuguese. After that it was possible to list all sorts of unusual streets.
 
-Looking through the street names and types I find out that there are some abbreviated street names. So I modified the `shape_element` function in order to correct this abbreviations. Basic changing all occurrences of “Av” or “Av.” to “Avenida” which is Portuguese for “Avenue”, and also “R.” to “Rua” which means “street”. 
-
 Looking at the names and street types I discovered that there are some abbreviated names. So I modified the `shape_element` function to correct these abbreviations. Basically all instances were corrected from "Av" or "Av." to "Avenida", which is the Portuguese for "Avenue" and also "R." to "Rua", which means "Street".
 
 After that the osm.json file was generated and imported into a MongoDB collection using the following command:
 
     > mongoimport -d poa -c poa --file porto-alegre_brazil.osm.json
-
-I also notice that the osm data file extracted with the *mapzen metro extracts* contains other cities around the chosen one. In fact that’s because they extract all data inside a given box. Therefore I could find nodes and ways for cities around Porto Alegre.
 
 I also noticed that the osm data extracted with the *mapzen metro extracts* tool contains other cities besides the chosen one. In fact that's because this tool extracts all the data within a box. So it was found nodes and ways of other cities around Porto Alegre while executind the MongoDB queries.
 
