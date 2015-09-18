@@ -4,7 +4,7 @@ comments: true
 title:  "Data Wrangle OpenStreetMaps Data"
 excerpt: "My personal project in fulfillment of Udacity’s Data Analyst Nanodegree"
 date:   2015-09-18 18:00:00
-published:   true
+published:   false
 ---
 
 # Data Wrangle OpenStreetMaps Data
