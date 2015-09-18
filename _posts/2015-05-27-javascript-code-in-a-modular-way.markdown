@@ -4,7 +4,7 @@ comments: true
 title:  "JavaScript code in a modular way"
 excerpt: "This post shows how to create a single JavaScript code to run in browser or Node.js environments"
 date:   2015-05-27 10:39:00
-published:   true
+published:   false
 ---
 
 Creating JavaScript code in a modular way

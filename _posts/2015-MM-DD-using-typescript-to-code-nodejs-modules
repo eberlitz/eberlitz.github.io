@@ -1,0 +1,29 @@
+---
+layout: post
+comments: true
+title:  "Using Typescript To Code Nodejs Modules"
+excerpt: "This post explains how to use the typescript compiler to write Node.js modules"
+date:   2015-07-13 12:00:00
+published:   false
+---
+
+```bash
+npm install typescript -g
+```
+
+tsc nodesample.ts --module commonjs
+
+
+
+$ npm install tsd -g
+
+$ tsd query q --action install
+
+import q = require('q');
+
+
+
+## References
+
+- [TypeScript](http://www.typescriptlang.org/)
+- [TSD TypeScript Definition manager for DefinitelyTyped](http://definitelytyped.org/tsd/)
