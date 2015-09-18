@@ -1,9 +1,9 @@
 ---
 layout: post
 comments: true
-title:  "JavaScript code in a modular way"
-excerpt: "This post shows how to create a single JavaScript code to run in browser or Node.js environments"
-date:   2015-05-27 10:39:00
+title:  "Data Wrangle OpenStreetMaps Data"
+excerpt: "My personal project in fulfillment of Udacity’s Data Analyst Nanodegree"
+date:   2015-09-18 18:00:00
 published:   true
 ---
 
@@ -17,15 +17,32 @@ by Eduardo Eidelwein Berlitz in fulfillment of Udacity’s Data Analyst Nanodegr
 
 ## Section 1: Problems Encountered in the Map
 
+### Street Abbreviations
+
+
 After running the audit script from lesson 6 against my chosen area I realized that I should change the regular expression to find the first word of the street name, and not the last. That's because the language in this map area is Portuguese. After that it was possible to list all sorts of unusual streets.
+Looking at the names and street types I discovered that there are some abbreviated names. So I modified the *shape_element* function to correct these abbreviations. Basically all instances were corrected from **"Av"** or **"Av."** to **"Avenida"**, which is the Portuguese for **"Avenue"** and also **"R."** to **"Rua"**, which means **"Street"**.
 
-Looking at the names and street types I discovered that there are some abbreviated names. So I modified the `shape_element` function to correct these abbreviations. Basically all instances were corrected from "Av" or "Av." to "Avenida", which is the Portuguese for "Avenue" and also "R." to "Rua", which means "Street".
+### Incorrect Postal Codes
 
-After that the osm.json file was generated and imported into a MongoDB collection using the following command:
+After listing all map postcodes using the script `print_postcodes.py` I have found that almost all of them follow the postal code format `00000-000` but some of them were in the wrong format as you can see in the sample below:
+
+    ...
+    90030-010
+    93216-120
+    93510-310 ÔÇÄ
+    90230091
+    92500-000
+    92410350
+    92020-970
+    ...
+
+So using regular expressions I manage to correct these postal codes to the correct format by replacing the original value by the first 5 digits followed by "-” and the others 3 digit.
+After that the **osm.json** file was generated and imported into a MongoDB collection using the following command:
 
     > mongoimport -d poa -c poa --file porto-alegre_brazil.osm.json
 
-I also noticed that the osm data extracted with the *mapzen metro extracts* tool contains other cities besides the chosen one. In fact that's because this tool extracts all the data within a box. So it was found nodes and ways of other cities around Porto Alegre while executind the MongoDB queries.
+I also noticed that the osm data extracted with the mapzen metro extracts tool contains other cities besides the chosen one. In fact that's because this tool extracts all the data within a box. So it was found nodes and ways of other cities around Porto Alegre while executing the MongoDB queries.
 
 ## Section 2: Data Overview
 
@@ -118,7 +135,7 @@ db.poa.aggregate([
     {'$sort': {'count': -1}}, {'$limit': 10}
 ])
 
-[{"_id" : "yes", "count" : 5174 },
+[{"_id": "yes", "count" : 5174 },
 { "_id" : "house", "count" : 811 },
 { "_id" : "industrial", "count" : 384 },
 { "_id" : "residential", "count" : 362 },
@@ -211,7 +228,7 @@ db.poa.aggregate([
 
 ## Section 3:  Additional Ideas
 
-Analyzing the data it is possible to realize that the city of Porto Alegre (which is the state capital) have less addresses associated with this data set than the city of São Leopoldo. But not all nodes or ways include this information since its geographical position is represented within regions of a city. What could be done in this case, is check if each node or way belongs to a city based on the latitude and longitude and ensure that the property "address.city" is properly informed.
+Analyzing the data it is possible to realize that the city of Porto Alegre (which is the state capital) have fewer addresses associated with this data set than the city of São Leopoldo. But not all nodes or ways include this information since its geographical position is represented within regions of a city. What could be done in this case, is check if each node or way belongs to a city based on the latitude and longitude and ensure that the property "address.city" is properly informed. By doing so, we could get statistics related to cities in a much more reliable way. In fact, I think this is the biggest benefit to anticipate problems and implement improvements to the data you want to analyze. Real world data are very susceptible to being incomplete, noisy and inconsistent which means that if you have low-quality of data the results of their analysis will also be of poor quality.
 
 Another alternative to help in the absence of information in the region would be the use of gamification to make more people help in the map contribution. Something like Waze app already does today.
 
@@ -227,3 +244,4 @@ This review of the data is cursory, but it’s obvious that the Porto Alegre are
 - [Python Regular Expressions](https://docs.python.org/2/library/re.html#search-vs-match)
 - [MongoDB Operators](http://docs.mongodb.org/v2.4/reference/operator/)
 - [Metro Extracts - City-sized portions of OpenStreetMap](https://mapzen.com/data/metro-extracts)
+- Udacity course, "Data Wrangling with MongoDB"
