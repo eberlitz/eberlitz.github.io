@@ -394,7 +394,7 @@ code, kbd, pre, samp {
   .wrap { padding: 0 12px; }
 
   .site-nav {
-    position: fixed;
+    position: relative;
     z-index: 10;
     top: 14px; right: 8px;
     background-color: white;
