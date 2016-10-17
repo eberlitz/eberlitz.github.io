@@ -257,6 +257,7 @@ code, kbd, pre, samp {
   font-size: 13px;
   /*overflow:auto;*/
   word-wrap: break-word;
+  white-space: normal;
 }
 
 .post code { padding: 1px 5px; }
