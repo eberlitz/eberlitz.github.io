@@ -1,5 +1,5 @@
 # Site settings
-title: Eduardo Eidelwein Berlitz blog
+title: Eduardo Eidelwein Berlitz
 email: eberlitz@gmail.com
 description: "A blog about computer science"
 baseurl: ""
@@ -8,5 +8,5 @@ twitter_username: eberlitz
 github_username:  eberlitz
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 permalink: pretty
