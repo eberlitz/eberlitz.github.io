@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "Install an npm package directly from github"
 excerpt: "This post shows how to install an npm package directly from github"
-date:   2015-05-27 10:39:00
+date:   2016-11-12 12:00:00
 published:   true
 ---
 
