@@ -23,7 +23,7 @@ A while ago, I had also seen a guy who generated a comic book and sent for a con
 
 Here we have another algorithm that can generate images from texts:
 
->[Image Synthesis From Text With Deep Learning | Two Minute Papers](https://www.youtube.com/watch?v=rAbhypxs1qQ)
+>[Image Synthesis From Text With Deep Learning - Two Minute Papers](https://www.youtube.com/watch?v=rAbhypxs1qQ)
 
 Or, generate videos from images:
 
@@ -31,7 +31,7 @@ Or, generate videos from images:
 
 And yet, if all this is generated with the low quality it is possible to improve it:
 
->[Enhance! Super Resolution From Google | Two Minute Papers](https://www.youtube.com/watch?v=WovbLx8C0yA)
+>[Enhance! Super Resolution From Google - Two Minute Papers](https://www.youtube.com/watch?v=WovbLx8C0yA)
 
 Now imagine all this interconnected inside a television, acting as an on-demand entertainment unit. Where you sit to watch television, you choose the style of movie you want to watch, the television then generates the movie in that style, and also through a camera observe your reactions to adjust the film while you watch, If you appear to be bored a comic scene appears or something like that. Your remote control instead of switching channels buttons has an “I’m not liking” button.
 What do you think? Too crazy?
