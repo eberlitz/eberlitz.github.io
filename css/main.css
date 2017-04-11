@@ -247,6 +247,10 @@ code, kbd, pre, samp {
 .post-content ul,
 .post-content ol { padding-left: 20px; }
 
+.highlight {
+  overflow: auto;
+}
+
 .post pre,
 .post code {
   border: 1px solid #d5d5e9;
@@ -258,7 +262,7 @@ code, kbd, pre, samp {
   font-size: 13px;
   /*overflow:auto;*/
   word-wrap: break-word;
-  white-space: normal;
+  white-space: pre;
 }
 
 .post code { padding: 1px 5px; }
