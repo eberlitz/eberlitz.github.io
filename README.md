@@ -1,4 +1,4 @@
-eberlitz.github.io
+[eberlitz.github.io](http://eberlitz.github.io/)
 ==================
 
 My Blog
