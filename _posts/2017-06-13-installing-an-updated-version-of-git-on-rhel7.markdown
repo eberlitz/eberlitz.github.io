@@ -1,8 +1,8 @@
 ---
 layout: post
 comments: true
-title:  "Analyzing the NYC Subway Dataset"
-excerpt: "My personal project in fulfillment of Udacity’s Data Analyst Nanodegree"
+title:  "Installing an updated version of git on RHEL7"
+excerpt: "How to update the outdated git on the Red Hat Enterprise Linux 7"
 date:   2017-06-13 10:00:00
 published:   true
 ---
