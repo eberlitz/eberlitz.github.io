@@ -9,7 +9,7 @@ published:   true
 
 # Installing an updated version of git on RHEL7
 
-Go to this url [https://www.kernel.org/pub/software/scm/git/](https://www.kernel.org/pub/software/scm/git/) and get the name of the latest realease.
+Go to this url [https://www.kernel.org/pub/software/scm/git/](https://www.kernel.org/pub/software/scm/git/) and get the name of the latest release.
 
 Install dependencies:
 
