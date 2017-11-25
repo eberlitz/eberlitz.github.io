@@ -1,0 +1,66 @@
+--- 
+layout: default 
+title: Curated links 
+permalink: /links/ 
+---
+
+<div class="links">
+  <ul class="posts">
+   
+  </ul>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD1_AnMxhuqvG5Fp7xmYPZRJ18sOLrsFKY",
+    authDomain: "eberlitzblog.firebaseapp.com",
+    databaseURL: "https://eberlitzblog.firebaseio.com",
+    projectId: "eberlitzblog",
+    storageBucket: "",
+    messagingSenderId: "119381214787"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+  firebase.database().ref('/links').once('value').then(function (snap) {
+    snap = snap.val();
+    var list = Object.keys(snap).map(function (k) { return snap[k]; });
+    list.forEach(function (link) {
+      link.added = new Date(link.added);
+      link.date && (link.date = new Date(link.date));
+    });
+    list.sort(function (a, b) { return a.added - b.added });
+
+    var linksNode = document.querySelector('.links .posts');
+    while (linksNode.hasChildNodes()) {
+      linksNode.removeChild(linksNode.lastChild);
+    }
+
+    list.map(function (link) {
+      var li = document.createElement('li');
+      var spanDate = document.createElement('span');
+      spanDate.className = 'post-date';
+      var options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+
+      spanDate.innerText = link.added.toLocaleString('en-US', options);
+      li.appendChild(spanDate);
+
+      var aPostLink = document.createElement('a');
+      aPostLink.className = 'post-link';
+      aPostLink.innerText = link.title;
+      aPostLink.href = link.url;
+      li.appendChild(aPostLink);
+      li.appendChild(document.createElement('br'));
+      var desc = document.createElement('text');
+      desc.innerText = link.description;
+      li.appendChild(desc);
+
+
+      return li;
+    }).forEach(function (el) {
+      linksNode.appendChild(el);
+    });
+  });
+</script>

@@ -4,8 +4,8 @@ email: eberlitz@gmail.com
 description: "A blog about computer science"
 baseurl: ""
 url: "http://eberlitz.github.io"
-twitter_username: eberlitz
 github_username:  eberlitz
+linkedin_username: eberlitz
 
 # Build settings
 markdown: kramdown
