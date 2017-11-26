@@ -31,7 +31,7 @@ permalink: /links/
       link.added = new Date(link.added);
       link.date && (link.date = new Date(link.date));
     });
-    list.sort(function (a, b) { return a.added - b.added });
+    list.sort(function (a, b) { return b.added - a.added });
 
     var linksNode = document.querySelector('.links .posts');
     while (linksNode.hasChildNodes()) {
