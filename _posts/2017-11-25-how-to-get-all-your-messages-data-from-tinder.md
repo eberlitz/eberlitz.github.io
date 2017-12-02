@@ -5,6 +5,7 @@ title:  "How to get all your messages data from tinder"
 excerpt: "Tutorial on how to get all your messages data from the tinder in a JSON format"
 date:   2017-11-25 23:00:00
 published:   true
+author: Eduardo Eidelwein Berlitz
 ---
 
 Sometime ago, I wanted to create a chat bot for studing conversational AI but I needed some data to train my models. So I thought to get all my chat messages from different services to use as a training data. Facebook and Google have a option in their site where you can get all your data, but Tinder doens't. So, I end up using a script in Node.js to do this. I'll describe the process, if you need the same.

@@ -1,9 +1,9 @@
 # Site settings
 title: Eduardo Eidelwein Berlitz
 email: eberlitz@gmail.com
-description: "A blog about computer science"
+description: "eberlitz blog"
 baseurl: ""
-url: "http://eberlitz.github.io"
+url: "https://eberlitz.github.io"
 github_username:  eberlitz
 linkedin_username: eberlitz
 
