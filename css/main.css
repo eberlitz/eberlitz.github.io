@@ -199,7 +199,11 @@ a:visited { color: #205caa; }
   vertical-align: middle;
 }
 
-.post-content { margin: 0 0 30px; }
+.post-content { 
+  margin: 0 0 30px; 
+  word-wrap: break-word;
+  white-space: normal;
+}
 
 .post-content > * { margin: 20px 0; }
 
