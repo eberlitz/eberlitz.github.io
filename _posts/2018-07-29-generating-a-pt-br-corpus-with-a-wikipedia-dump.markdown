@@ -7,14 +7,14 @@ date:   2018-07-29 14:00:00
 published:   true
 ---
 
-# Generating a pt-BR corpus with a wikipedia dump
-
 
 1. Download the Wikipedia pt-br articles dump:
 
 ```sh
-curl https://dumps.wikimedia.org/ptwiki/latest/ptwiki-latest-pages-articles-multistream-index.txt.bz2 --create-dirs -o data/ptwiki-latest-pages-articles-multistream-index.txt.bz2
-curl https://dumps.wikimedia.org/ptwiki/latest/ptwiki-latest-pages-articles-multistream.xml.bz2 --create-dirs -o data/ptwiki-latest-pages-articles-multistream.xml.bz2
+curl https://dumps.wikimedia.org/ptwiki/latest/ptwiki-latest-pages-articles-multistream-index.txt.bz2 \
+    --create-dirs -o data/ptwiki-latest-pages-articles-multistream-index.txt.bz2
+curl https://dumps.wikimedia.org/ptwiki/latest/ptwiki-latest-pages-articles-multistream.xml.bz2 \
+    --create-dirs -o data/ptwiki-latest-pages-articles-multistream.xml.bz2
 ```
 
 2. The wikipedia dump will have all articles in the wiki text format that is like a markdown with special tokens. So in order to get only the text we need to transform the wiki format to raw text. We could use the pythons `gensim.corpora.WikiCorpus` but its tokenizer is not so good for Portuguese. So I ended up using the `wikiextractor` and then I cleanup the text myself using another script. So, clone and execute the `wikiextractor` to transform the xml data into text:
@@ -22,7 +22,10 @@ curl https://dumps.wikimedia.org/ptwiki/latest/ptwiki-latest-pages-articles-mult
 ```sh
 git clone https://github.com/attardi/wikiextractor.git
 cd ./wikiextractor
-python ./WikiExtractor.py --no-templates -o ../data/ptwiki-articles-text/ -b 10M -c ../data/ptwiki-latest-pages-articles-multistream.xml.bz2
+python ./WikiExtractor.py --no-templates \
+    -o ../data/ptwiki-articles-text/ \
+    -b 10M \
+    -c ../data/ptwiki-latest-pages-articles-multistream.xml.bz2
 cd ..
 ```
 
@@ -43,7 +46,9 @@ At the time of writing there was 1000400 documents in the ptwiki-dump. =]
 3. Now that we have the wikipedia texts, we can start the pre-processing of the files.
 
 ```sh
-python scripts/preprocess.py ./data/ptwiki-articles-text/ -o ./data/ptwiki-articles-text-cleaned
+python scripts/preprocess.py \
+    ./data/ptwiki-articles-text/ \
+    -o ./data/ptwiki-articles-text-cleaned
 ```
 
 This script will do the following:

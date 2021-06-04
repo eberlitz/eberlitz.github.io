@@ -1,14 +1,14 @@
 ---
 layout: post
 comments: true
-title:  "How to get all your messages data from tinder"
+title:  "How to scrap data with Node.JS"
 excerpt: "Tutorial on how to get all your messages data from the tinder in a JSON format"
 date:   2017-11-25 23:00:00
 published:   true
 author: Eduardo Eidelwein Berlitz
 ---
 
-Sometime ago, I wanted to create a chat bot for studing conversational AI but I needed some data to train my models. So I thought to get all my chat messages from different services to use as a training data. Facebook and Google have a option in their site where you can get all your data, but Tinder doens't. So, I end up using a script in Node.js to do this. I'll describe the process, if you need the same.
+Sometime ago, I wanted to create a chat bot for studying conversational AI but I needed some data to train my models. So I thought to get all my chat messages from different services to use as a training data. Facebook and Google have a option in their site where you can get all your data, but Tinder doesn't (Now they have). So, I end up using a script in Node.js to do this. I'll describe the process, if you need the same.
 
 In the script I just simulate the API calls from the Tinder Web. So the first step is to authenticate the API calls. For this, in each request that is made, it's necessary to include an `x-auth-token` in the request headers. To get this, I've just authenticated in the tinder web using Google Chrome, then using the developer tools in the requests tab, filtering by 'updates' you can copy the token header.
 
@@ -35,7 +35,7 @@ const headers = {
 
 function checkStatus(response) {
     if (response.statusCode === 401) {
-        throw new Error('401: Unathorized, insert your token in the script!');
+        throw new Error('401: Unauthorized, insert your token in the script!');
     }
 }
 
@@ -92,8 +92,8 @@ async function getMatchesWithMessages() {
 })().catch(err => console.error(err));
 ```
 
-Remenber to change "YOUR_TOKEN_HERE" with the auth token previously taken with the Chrome Developer Tools.
+Remember to change "YOUR_TOKEN_HERE" with the auth token previously taken with the Chrome Developer Tools.
 
-Install the dependencias with `npm install request bluebird`.
+Install the dependencies with `npm install request bluebird`.
 
 Then run `node main.js`, and your data will be saved as a JSON file called `tinder.json` =]

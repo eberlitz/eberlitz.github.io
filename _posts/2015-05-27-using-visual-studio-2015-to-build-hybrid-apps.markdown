@@ -8,9 +8,6 @@ mathjax: false
 published:   true
 ---
 
-Using Visual Studio 2015 to build hybrid apps
-================================================================
-
 This walk through will show you how to use Visual Studio 2015 with the Tools for Apache Cordova to create hybrid mobile applications.
 
 Prerequisites

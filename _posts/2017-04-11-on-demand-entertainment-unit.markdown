@@ -8,9 +8,6 @@ published:   true
 tags: Machine Learning Artificial Intelligence Ideas Future
 ---
 
-On-demand entertainment unit
-============================
-
 
 I usually read quite a bit about the area of artificial intelligence, machine learning, NLP, image processing and others. These days, talking to some friends, I had a crazy thought of joining several state-of-the-art algorithms that already exist, to create an idea of the entertainment in the future.
 Today through recurrent neural networks (LSTM) some crazy people decide to generate books or scripts of movies, as seen in these posts:

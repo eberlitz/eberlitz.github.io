@@ -7,8 +7,6 @@ date:   2016-11-12 12:00:00
 published:   true
 ---
 
-Install an npm package directly from github
-=========================================
 
 Today I needed to install a package directly from npm because I've had to make some fixes in a third party library.
 So to be abble to test and use before the external library was updated on npm registry I've found a way to install it using npm.

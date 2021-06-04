@@ -7,8 +7,6 @@ date:   2016-09-14 12:00:00
 published:   true
 ---
 
-# [Resolved] Move shelveset to a different branch in TFS
-
 
 After making a lot of changes in a branch, and due to an internal policy I had to change the branch to which I should check-in those changes. To not manually do this, I found a way to pass a shelveset to another branch using a tool.
 

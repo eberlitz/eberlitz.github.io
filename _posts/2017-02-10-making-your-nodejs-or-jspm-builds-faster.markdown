@@ -7,8 +7,6 @@ date:   2017-02-10 14:00:00
 published:   true
 ---
 
-Making your Node.js or JSPM builds faster
-=========================================
 
 Using a node projet in a Continuous Integration Enviroment can result in lots of packages checks and downloads in your server. 
 You can make some simple adjusts to save some time.

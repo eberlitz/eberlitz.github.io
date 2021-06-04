@@ -7,7 +7,6 @@ date:   2015-09-18 18:00:00
 published:   true
 ---
 
-# Data Wrangle OpenStreetMaps Data
 
 by Eduardo Eidelwein Berlitz in fulfillment of Udacity’s Data Analyst Nanodegree, Project 3
 

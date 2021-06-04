@@ -1,10 +1,11 @@
 # Site settings
 title: Eduardo Eidelwein Berlitz
+subtitle: Software Engineer
 email: eberlitz@gmail.com
 description: "eberlitz blog"
 baseurl: ""
-url: "https://eberlitz.github.io"
-github_username:  eberlitz
+url: "https://eberlitz.dev"
+github_username: eberlitz
 linkedin_username: eberlitz
 
 # Build settings

@@ -1,17 +1,14 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /about/
 ---
 
-Who am I?
-=========
 
 My name is **Eduardo Eidelwein Berlitz**. Some people knows me as **eberlitz**, especially across the web where I use this nickname.
 
 I am always seeking to learn new technologies, I am a dedicated person, fast learner.
 
-I'm also a traveler and you can see my photos on my [Flickr](https://www.flickr.com/photos/eberlitz/).
 
 How to get in touch?
 ====================

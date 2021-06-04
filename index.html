@@ -2,17 +2,22 @@
 layout: default
 ---
 
-<div class="home">
-  
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <br>
-        {{ post.excerpt }}
-      </li>
-    {% endfor %}
-  </ul>
+<h1>Recent posts</h1>
 
-</div>
+  
+  {% for post in site.posts %}
+    <article>
+      <h2 style="font-weight: 500;">
+        <a class="black-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <p>
+        <time datetime="{{ post.date }}" class="post-date">{{ post.date | date: "%B %-d, %Y" }}</time>
+      </p>
+      <p>{{ post.excerpt }}</p>
+    </article>
+    {% if forloop.last == false %}
+    <hr>
+  {% endif %}
+
+  {% endfor %}
+

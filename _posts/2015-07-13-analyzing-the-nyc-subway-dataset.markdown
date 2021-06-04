@@ -7,8 +7,6 @@ date:   2015-07-13 12:00:00
 published:   true
 ---
 
-# Analyzing the NYC Subway Dataset
-
 by Eduardo Eidelwein Berlitz in fulfillment of Udacity’s Data Analyst Nanodegree, Project 1
 
 ## Section 1. Statistical Test
