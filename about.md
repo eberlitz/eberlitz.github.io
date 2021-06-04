@@ -10,7 +10,7 @@ My name is **Eduardo Eidelwein Berlitz**. Some people knows me as **eberlitz**, 
 I am always seeking to learn new technologies, I am a dedicated person, fast learner.
 
 
-How to get in touch?
-====================
+## How to get in touch?
+
 
 You can [send me an e-mail](mailto:eberlitz@gmail.com) for any question or suggestion.
